@@ -1,4 +1,6 @@
-﻿namespace UBF.Ports
+﻿using UBF.Commands;
+
+namespace UBF.Ports
 {
     public abstract class Port
     {
@@ -7,5 +9,7 @@
         public UniversalBot Bot { get; set; }
 
         public abstract void Setup();
+
+        public abstract Command[] PortCommands();
     }
 }
